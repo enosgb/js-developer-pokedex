@@ -12,7 +12,7 @@ export class PokemonsView extends View {
           pokemon.name
         }" class="pokemon ${pokemon.type} ">
         <span class="number disable_pointer_events">#${pokemon.number}</span>
-        <span class="name ">${pokemon.name}</span>
+        <span class="name disable_pointer_events">${pokemon.name}</span>
 
         <div class="detail disable_pointer_events">
             <ol class="types">
