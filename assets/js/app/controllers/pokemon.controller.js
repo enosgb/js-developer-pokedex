@@ -11,6 +11,8 @@ export class PokemonController {
     this._pokemons = [];
     this._apiController = new ApiController();
     this._pokemonsView = new PokemonsView(this._pokemonList);
+    this._content = document.querySelector(".content");
+    this._detailsContent = document.querySelector(".details_content");
   }
 
   _loadPokemonsItens(offset, limit) {
@@ -35,9 +37,13 @@ export class PokemonController {
 
   _detailsClick() {
     const pokemons = this._pokemons;
+    const content = this._content;
+    const detailsContent = this._detailsContent;
     this._pokemonList.addEventListener("click", (event) => {
       const id = event.target.id - 1;
-      console.log(pokemons[id])
+      console.log(pokemons[id]);
+      content.style.display = "none";
+      detailsContent.style.display = "block"
     });
   }
 

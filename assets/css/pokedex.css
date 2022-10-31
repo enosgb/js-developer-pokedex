@@ -85,6 +85,10 @@
   padding: 1rem;
   border-radius: 1rem;
 }
+.pokemon:hover{
+  transform: scale(1.1);
+  cursor: pointer;
+}
 
 .pokemon .number {
   color: #000;
@@ -145,9 +149,54 @@
   border: none;
   border-radius: 1rem;
 }
+button:hover{
+  transform: scale(1.1);
+  cursor: pointer;
+}
 
 .disable_pointer_events {
   pointer-events: none;
+}
+
+.details_content{
+  display: none;
+}
+
+.poke_details{
+  border-radius: 0;
+  margin: 0;
+}
+
+.d-flex{
+  display: flex;
+}
+
+.tabs_card{
+  background-color: white;
+  border-radius: 2rem 2rem 0 0;
+  padding:10px 0 0 0;
+  padding-bottom: 4rem;
+  width: 100%;
+}
+
+div ul{
+  display: flex;
+  column-gap: 10px;
+  list-style-type: none;
+}
+
+.tab_selected{
+  border-bottom: 1px solid #6f38f6;
+}
+
+nav li p {
+  padding: 0 10px;
+}
+
+table {
+  table-layout: fixed;
+  border-collapse: separate;
+  border-spacing: 50px 10px;
 }
 
 @media screen and (min-width: 380px) {
