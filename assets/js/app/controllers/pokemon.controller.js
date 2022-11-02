@@ -1,5 +1,6 @@
 import { ApiController } from "./api.controller.js";
 import { PokemonsView } from "../views/pokemons.view.js";
+import { PokemonDetailsController } from "./pokemon.details.controller.js";
 
 export class PokemonController {
   constructor() {
@@ -11,6 +12,7 @@ export class PokemonController {
     this._pokemons = [];
     this._apiController = new ApiController();
     this._pokemonsView = new PokemonsView(this._pokemonList);
+    this._pokemonDetailsController = new PokemonDetailsController();
     this._content = document.querySelector(".content");
     this._detailsContent = document.querySelector(".details_content");
   }
@@ -39,11 +41,12 @@ export class PokemonController {
     const pokemons = this._pokemons;
     const content = this._content;
     const detailsContent = this._detailsContent;
+    const pokemonDetailsController = this._pokemonDetailsController;
     this._pokemonList.addEventListener("click", (event) => {
       const id = event.target.id - 1;
-      console.log(pokemons[id]);
       content.style.display = "none";
-      detailsContent.style.display = "block"
+      detailsContent.style.display = "block";
+      pokemonDetailsController.loadDetails(pokemons[id]);
     });
   }
 

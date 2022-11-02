@@ -23,7 +23,7 @@ export class ApiController {
 
       pokemon.height = pokeDetail.height;
       pokemon.weight = pokeDetail.weight;
-      pokemon.abilities = pokeDetail.abilities;
+      pokemon.abilities = pokeDetail.abilities.map((abilities) => abilities.ability.name);
 
       pokemon.photo = pokeDetail.sprites.other.dream_world.front_default;
 
