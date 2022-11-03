@@ -86,7 +86,6 @@
   border-radius: 1rem;
 }
 .pokemon:hover {
-  transform: scale(1.1);
   cursor: pointer;
 }
 
